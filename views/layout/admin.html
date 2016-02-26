@@ -1,13 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>后台管理 - {{.BlogTitle}}</title>
     <link rel="stylesheet" href="/static/css/lib.min.css"/>
     <link rel="stylesheet" href="/static/css/g.css"/>
     <script type="text/javascript" src="/static/javascript/lib.min.js"></script>
 </head>
 <body>
-    <div id="screen">
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">{{.BlogTitle}}</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/#">home</a></li>
+                    <li><a href="/#">about</a></li>
+                    <li><a href="/#">contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="screen">
         <header id="header" class="mt20">
             <div class="fr">
                <div class="fr">

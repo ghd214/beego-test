@@ -15,7 +15,12 @@
       {{end}}
     </div>
     <a class="entry-snippet" itemprop="description" href="/article/{{.Ident}}">
-      {{substr .Content.Content 0 300}}...
+      {{if not .Content.Summary}}
+        {{ .Title}}...
+      {{else}}
+        {{ .Content.Summary}}
+      {{end}}
+
     </a>
   </div>
 {{end}}
